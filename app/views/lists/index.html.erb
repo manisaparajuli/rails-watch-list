@@ -1,5 +1,7 @@
 <ol>this is a list
   <% @lists.each do |list| %>
-    <li><%=  list.name %></li>
+    <li><%=  list.name %> <%= link_to "details", list_path(list) %></li>
   <% end %>
 </ol>
+
+<%= link_to "create a list", new_list_path  %>
