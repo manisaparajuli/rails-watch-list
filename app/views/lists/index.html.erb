@@ -1,12 +1,12 @@
-<ol>this is a list
+<div class="navbar-lewagon d-fex justify-content-between" >
+  <div>
+    <%= link_to "My List", lists_path  %>  <%= link_to "New list", new_list_path  %>
+  </div>
+</div>
+<div class="banner-image"><%= image_tag "movie_banner.jpg"%></div>
+<ol>
   <% @lists.each do |list| %>
     <li><%= link_to list.name, list_path(list) %>
-    <%=link_to "Delete",
-    bookmark_path(list),
-    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-  %>
     </li>
   <% end %>
 </ol>
-
-<%= link_to "create a list", new_list_path  %>
