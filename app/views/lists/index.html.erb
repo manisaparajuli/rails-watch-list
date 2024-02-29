@@ -1,9 +1,9 @@
-<div class="navbar-lewagon d-fex justify-content-between" >
+<div class="navbar-lewagon" >
   <div>
     <%= link_to "My List", lists_path  %>  <%= link_to "New list", new_list_path  %>
   </div>
 </div>
-<div class="banner-image"><%= image_tag "movie_banner.jpg"%></div>
+<div class="banner-image">this is a list</div>
 <ol>
   <% @lists.each do |list| %>
     <li><%= link_to list.name, list_path(list) %>
