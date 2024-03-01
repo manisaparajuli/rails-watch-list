@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: rgb(248, 226, 226);
   height: 50px;
 
 }
@@ -15,4 +15,24 @@
 
 .nav-list{
   text-decoration-color: white;
+
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
+  margin: 0 12px;
+  background: rgb(248, 226, 226);
+
+}
+
+.content{
+  color: rgb(248, 226, 226);
+  text-decoration: none;
+
+}
+
+.index-page{
+  background: rgb(248, 226, 226);
 }

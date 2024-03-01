@@ -1,5 +1,11 @@
-<%= simple_form_for(@list) do  |f| %>
-  <%= f.input :name %>
-  <%= f.submit %>
-<% end %>
-<%= link_to "back to list", lists_path %>
+<div class="container movie-form g-grid gap 2">
+  <%= simple_form_for(@list) do  |f| %>
+    <%= f.input :name %>
+    <%= f.input :photo, as: :file %>
+
+    <div>
+    <%= f.submit class: "btn btn-secondary col-6 my-2 mx-auto button " %>
+    <button class= "button btn btn-secondary col-6 my-2 mx-auto "><%= link_to "back to list", lists_path, class: "button"%></button>
+    </div>
+  <% end %>
+</div>

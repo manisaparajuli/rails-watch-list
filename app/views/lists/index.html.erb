@@ -1,36 +1,38 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <div class="container-fluid">
-    <%= link_to "#", class: "navbar-brand" do %>
-      <%= image_tag "https://simpleicon.com/wp-content/uploads/movie-1.png" %>
-    <% end %>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+<div class="index-page">
+  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+    <div class="container-fluid">
+      <%= link_to "#", class: "navbar-brand" do %>
+        <%= image_tag "https://simpleicon.com/wp-content/uploads/movie-1.png" %>
+      <% end %>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto fw-semibold">
-        <%# if user_signed_in? %>
-          <li class="nav-item active">
-            <%= link_to "My List", lists_path, class: "nav-link"  %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "New list", new_list_path, class: "nav-link"  %>
-          </li>
-      </ul>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto fw-semibold fs-4">
+          <%# if user_signed_in? %>
+            <li class="nav-item active">
+              <%= link_to "My List", lists_path, class: "nav-link"  %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "New list", new_list_path, class: "nav-link"  %>
+            </li>
+        </ul>
+      </div>
     </div>
   </div>
-</div>
 
-<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)">
-  Home Theatre
-</div>
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)">
+    Home Theatre
+  </div>
 
 
-<%# lists cards %>
-<div class="cards">
-  <ul>
-    <% @lists.each do |list| %>
-      <li><%= link_to list.name, list_path(list) %></li>
-    <% end %>
-  </ul>
+  <%# lists cards %>
+  <div class="cards">
+      <% @lists.each do |list| %>
+        <div class="card-category my-3 rounded-3" id= "movie-genres" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path list.photo.key, height: 300, width: 400, crop: :fill %>')">
+          <%= link_to list.name, list_path(list), class: "content"%>
+        </div>
+      <% end %>
+  </div>
 </div>

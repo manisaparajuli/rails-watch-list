@@ -8,3 +8,18 @@
 legend ~ div.form-check:first-of-type {
   clear: left;
 }
+
+.movie-form{
+  margin: 74px;
+
+  .button{
+    align-items: center;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+
+  }
+}
