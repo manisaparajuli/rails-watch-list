@@ -1,4 +1,7 @@
-.card-for-show{
-  display: flex;
-  flex-direction: column;
+#card-for-show{
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr ;
+  background-color: rgba(0, 255, 255, 0.079);
+  height: fit-content;
+  
 }

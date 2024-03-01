@@ -1,13 +1,15 @@
-<div class="container card-for-show">
-  <%= @list.name %>
-  <%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
-  <% @list.bookmarks.each do |bookmark| %>
-    <p><%= bookmark.movie.title %>: <%= bookmark.comment %> </p>
-    <%=link_to "Delete bookmark",
-        bookmark_path(bookmark),
-        data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-      %>
-  <% end %><br/>
-  <%= link_to "Add bookmark", new_list_bookmark_path(@list) %>
-  <%= link_to "back to list", lists_path%>
+<div class="container " id="card-for-show">
+  <div class="movie_card">
+    <%= @list.name %>
+    <%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
+    <% @list.bookmarks.each do |bookmark| %>
+      <p><%= bookmark.movie.title %>: <%= bookmark.comment %> </p>
+      <%=link_to "Delete bookmark",
+          bookmark_path(bookmark),
+          data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+        %>
+    <% end %><br/>
+    <%= link_to "Add bookmark", new_list_bookmark_path(@list) %>
+    <%= link_to "back to list", lists_path%>
+  </div>
 </div>
