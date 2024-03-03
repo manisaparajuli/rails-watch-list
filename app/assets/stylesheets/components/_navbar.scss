@@ -21,9 +21,9 @@
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 16px;
+  column-gap: 12px;
   margin: 0 12px;
-  background: rgb(248, 226, 226);
+  background: rgba(59, 49, 49, 0.227);
 
 }
 
@@ -34,5 +34,5 @@
 }
 
 .index-page{
-  background: rgb(248, 226, 226);
+  background: rgba(59, 49, 49, 0.227);
 }

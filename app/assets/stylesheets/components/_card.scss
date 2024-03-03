@@ -1,7 +1,21 @@
+.container-1{
+  padding: 64px;
+}
 #card-for-show{
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr ;
-  background-color: rgba(0, 255, 255, 0.079);
-  height: fit-content;
-  
+  padding: 16px 12px 0 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 8px;
+  width: 400px;
+  gap:6px;
+
+  -moz-box-shadow: 0 0 3px #ccc;
+    -webkit-box-shadow: 0 0 3px #ccc;
+    box-shadow: 0 0 3px #ccc;
+
+}
+.poster{
+  height: 200px;
+  width:200px;
 }
